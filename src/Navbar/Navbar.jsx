@@ -102,7 +102,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Get started</a>
+    <Link to="/login" className="font-bold text-xl bg-lime-400 p-4 rounded-full">Login</Link>
   </div>
   <div className="w-10 rounded-full">
           <img src="../public/vite.svg" />
