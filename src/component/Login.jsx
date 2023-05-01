@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-// import { AuthContext } from '../Providers/AuthProviders';
+import { AuthContext } from '../Providers/AuthProviders';
+import { FaFacebookSquare, FaGithubAlt } from "react-icons/fa";
 
 
 const Login = () => {
 
-    // const {signIn, signInWithGoogle}=useContext(AuthContext);
+    const {signIn, signInWithGoogle}=useContext(AuthContext);
 
     const handleLogin=(event)=>{
           event.preventDefault();
@@ -36,12 +37,17 @@ const Login = () => {
         })
     }
     return (
-        <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col">
-          <div className="text-center">
+        <>
+         <div className="text-center bg-base-200 py-4">
             <h1 className="text-5xl font-bold">Please Login now!</h1>
           </div>
-          <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        
+        <div className='bg-base-200'>
+             <div className="mx-auto w-1/2 ">
+           
+        <div className="hero-content flex-col grid grid-cols-1 md:grid-cols-2">
+          
+          <div className="card flex-shrink-0 max-w-sm w-full  shadow-2xl bg-base-100">
             <form onSubmit={handleLogin} className="card-body">
               <div className="form-control">
                 <label className="label">
@@ -67,12 +73,23 @@ const Login = () => {
             New to auth master? Please Register
             </Link>
             </p>
-            <div>
-            <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary">Google</button>
+            
+          </div>
+          <div>
+          <div>
+            <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary">
+               <FaFacebookSquare className='text-black text-2xl'></FaFacebookSquare> Continue with Google </button>
+            </div>
+          <div>
+            <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary"><FaGithubAlt className='text-black text-2xl'></FaGithubAlt> Continue with github </button>
             </div>
           </div>
+
         </div>
-      </div>
+        </div>
+        </div>
+        </>
+       
     );
 };
 

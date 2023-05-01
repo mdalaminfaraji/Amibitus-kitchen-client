@@ -1,19 +1,20 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
-// import { AuthContext } from '../Providers/AuthProviders';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Register = () => {
-//   const {user,createUser}=useContext(AuthContext);
+  const {user,createUser}=useContext(AuthContext);
   
 
  const handleRegister=(event)=>{
     event.preventDefault();
     const form=event.target;
     const name=form.name.value;
+    const photoUrl=form.photoUrl.value;
     const email=form.email.value;
     const password=form.password.value;
-    console.log(name, email, password);
-    createUser(email, password)
+    console.log(name, email, password, photoUrl);
+    createUser( email, password)
     .then(result=>{
         const loggedUser=result.user;
         console.log(loggedUser);
@@ -48,6 +49,10 @@ const Register = () => {
                   <span className="label-text">Password</span>
                 </label>
                 <input type="password" placeholder="password" name='password' className="input input-bordered" required/>
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input type="text" placeholder="photoUrl" name='photoUrl' className="input input-bordered" required/>
                 <label className="label">
                   <Link to="/login" className="label-text-alt link link-hover">Already have an account</Link>
                 </label>
