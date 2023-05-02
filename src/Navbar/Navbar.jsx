@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../Providers/AuthProviders';
 
 const Navbar = () => {
+    const {user,  logOUt}=useContext(AuthContext);
     return (
         <div className="navbar bg-lime-200 px-5">
   <div className="navbar-start">
@@ -101,12 +103,15 @@ const Navbar = () => {
      
     </ul>
   </div>
-  <div className="navbar-end">
-    <Link to="/login" className="font-bold text-xl bg-lime-400 p-4 rounded-full">Login</Link>
+  {user ?<><div className=" navbar-end">
+          <img title={user?.displayName} className='w-10 rounded-full' src={user?.photoURL} /><div className='font-bold text-sm bg-lime-300 ms-3 p-3 hover:bg-lime-500 rounded-full cursor-pointer' onClick={logOUt}>LogOut</div>
+         </div>
+         
+         </> 
+    :<div className="navbar-end">
+    <Link to="/login" className="font-bold text-xl bg-lime-300 p-3 me-3 hover:bg-lime-500  rounded-full">Login</Link>
   </div>
-  <div className="w-10 rounded-full">
-          <img src="../public/vite.svg" />
-    </div>
+  }
 </div>
     );
 };

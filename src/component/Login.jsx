@@ -1,28 +1,38 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
-import { FaFacebookSquare, FaGithubAlt } from "react-icons/fa";
+import { FaFacebookSquare, FaGithubAlt, FaGoogle } from "react-icons/fa";
 
 
 const Login = () => {
-
-    const {signIn, signInWithGoogle}=useContext(AuthContext);
+    const [error, setError]=useState('');
+    const [success, setSuccess]=useState('');
+    const {signIn, signInWithGoogle, signInWithGithub}=useContext(AuthContext);
 
     const handleLogin=(event)=>{
           event.preventDefault();
+          setError('');
+          setSuccess('');
           const form=event.target;
           const email=form.email.value;
           const password=form.password.value;
           console.log(email, password);
+          if(password.length<6){
+            setError('Please Enter valid password and Email');
+            return;
+          }
 
           signIn(email, password)
           .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser);
+            setSuccess('User login successful');
+            setError('');
             form.reset();
+
           })
           .catch(error=>{
-            console.log(error);
+            setError(error.message);
           })
     }
 
@@ -36,10 +46,23 @@ const Login = () => {
             console.log(error);
         })
     }
+
+    const handleGithubSignIn=()=>{
+        signInWithGithub()
+        .then(result=>{
+            const loggedUser=result.user;
+            console.log(loggedUser);
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+    }
     return (
         <>
          <div className="text-center bg-base-200 py-4">
             <h1 className="text-5xl font-bold">Please Login now!</h1>
+            <p className='text-red-500 text-center font-bold text-xl'>{error}</p>
+             <p className='text-blue-500 text-center font-bold text-xl'>{success}</p>
           </div>
         
         <div className='bg-base-200'>
@@ -70,7 +93,7 @@ const Login = () => {
             </form>
             <p className='mb-4 ml-6'>
             <Link to="/register" className="label-text-alt link link-hover">
-            New to auth master? Please Register
+            New to Ambitious kitchen? <span className='text-red-500'>Please Register</span>
             </Link>
             </p>
             
@@ -78,10 +101,10 @@ const Login = () => {
           <div>
           <div>
             <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary">
-               <FaFacebookSquare className='text-black text-2xl'></FaFacebookSquare> Continue with Google </button>
+               <FaGoogle className='text-black text-2xl'></FaGoogle> Continue with Google </button>
             </div>
           <div>
-            <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary"><FaGithubAlt className='text-black text-2xl'></FaGithubAlt> Continue with github </button>
+            <button onClick={handleGithubSignIn} className="btn btn-active btn-primary"><FaGithubAlt className='text-black text-2xl'></FaGithubAlt> Continue with github </button>
             </div>
           </div>
 
