@@ -10,7 +10,7 @@ const ViewRecipes = () => {
         <>
         <div className='grid grid-cols-1 md:grid-cols-2 mt-3 drop-shadow-md  md:h-96  p-8 bg-gradient-to-r from-indigo-100 from-10% via-sky-200 via-30% to-emerald-300 to-90%'>
            <div className='rounded'>
-            <img src={chef_picture} className='w-96 drop-shadow-lg h-full rounded-md mx-auto'/>
+            <img src={chef_picture} className='w-96 drop-shadow-lg max-h-80 rounded-md mx-auto'/>
            </div>
            <div className='border-double drop-shadow-lg p-3 border-4 border-sky-500 mt-3 md:mt-0'>
             <h1 className='text-4xl font-semibold '>Welcome <br/> <span>I am {chef_name}</span></h1>

@@ -7,25 +7,25 @@ import banner4 from '../images/banner4.jpg'
 const Banner = () => {
     return (
         <>
-       <div className="carousel w-full h-96">
+       <div className="carousel w-full md:h-96 ">
   <div id="item1" className="carousel-item w-full" style={{backgroundImage: `url(${banner1})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
-    <p className='text-cyan-100 font-semibold text-7xl text-center w-full pt-8'> Welcome to my <br/> chinese<br/> Ambitious Kitchen <br/>
-    <Link to="/login" className='btn-primary'>Login</Link>
+    <p className='text-cyan-100 font-semibold md:text-7xl text-6xl  text-center w-full pt-8'> Welcome to my <br/> chinese<br/> Ambitious Kitchen <br/>
+    <Link to="/register" className='btn-primary'>Please Register</Link>
      </p>
   </div> 
   <div id="item2" className="carousel-item w-full" style={{backgroundImage: `url(${banner6})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
     <p className='text-cyan-100 font-semibold text-7xl text-center w-full pt-8'> Welcome to my <br/> chinese<br/> Ambitious Kitchen 
     <br/>
-    <Link to="/login" className='btn-primary'>Login</Link>
+    <Link to="/register" className='btn-primary'>Please Register</Link>
      </p>
   </div> 
   <div id="item3" className="carousel-item w-full" style={{backgroundImage: `url(${banner3})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
     <p className='text-cyan-100 font-semibold text-7xl text-center w-full pt-8'> Welcome to my <br/> chinese<br/> Ambitious Kitchen <br/>
-    <Link to="/login" className='btn-primary'>Login</Link> </p>
+    <Link to="/register" className='btn-primary'>Please Register</Link></p>
   </div> 
   <div id="item4" className="carousel-item w-full" style={{backgroundImage: `url(${banner4})`, backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
     <p className='text-black font-semibold text-7xl text-center w-full pt-8'> Welcome to my <br/> chinese<br/> Ambitious Kitchen <br/>
-    <Link to="/login" className='btn-primary'>Login</Link> </p>
+    <Link to="/register" className='btn-primary'>Please Register</Link></p>
   </div> 
 </div> 
 <div className="flex justify-center w-full py-2 gap-2">

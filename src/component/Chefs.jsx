@@ -3,7 +3,7 @@ import { FaHeart } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 const Chefs = ({chef}) => {
-    console.log(chef);
+    // console.log(chef);
     const {id, chef_name,years_of_experience, num_of_recipes,likes,chef_picture}=chef;
     return (
         <div>
