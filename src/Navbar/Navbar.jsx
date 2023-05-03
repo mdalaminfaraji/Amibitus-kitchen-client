@@ -104,7 +104,7 @@ const Navbar = () => {
     </ul>
   </div>
   {user ?<><div className=" navbar-end">
-          <img title={user?.displayName} className='w-10 rounded-full' src={user?.photoURL} /><div className='font-bold text-sm bg-lime-300 ms-3 p-3 hover:bg-lime-500 rounded-full cursor-pointer' onClick={logOUt}>LogOut</div>
+          <img title={user?.displayName} className='w-10 rounded-full' src={user?.photoURL} /><div className='font-bold text-sm bg-cyan-400 ms-3 p-3 hover:bg-lime-300 rounded-full cursor-pointer' onClick={logOUt}>LogOut</div>
          </div>
          
          </> 
