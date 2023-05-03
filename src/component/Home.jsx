@@ -3,7 +3,8 @@ import Banner from './Banner';
 import { useLoaderData } from 'react-router';
 import Chefs from './Chefs';
 import {  ColorRing } from  'react-loader-spinner'
-
+import banner2 from '../images/banner2.jpg'
+import { Link } from 'react-router-dom';
 const Home = () => {
    
     const chefData=useLoaderData();
@@ -27,6 +28,10 @@ const Home = () => {
                 {
                     chefData.map(chef=><Chefs key={chef.id} chef={chef}></Chefs>)
                 }
+            </div>
+            <div className='h-screen my-4 brightness-100 relative  my-container  w-full rounded-lg' style={{backgroundImage: `url(${banner2})`, backgroundSize:'cover'}}>
+               <Link to="/register" className='btn btn-primary absolute mx-auto w-96 bottom-28 right-96'>Please Register</Link>
+               
             </div>
             
         </div>

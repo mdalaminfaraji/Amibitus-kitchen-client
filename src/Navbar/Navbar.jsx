@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProviders';
-
+import logo1 from "../images/logo1.jfif";
 const Navbar = () => {
     const {user,  logOUt}=useContext(AuthContext);
     return (
@@ -54,7 +54,7 @@ const Navbar = () => {
           </li>
       </ul>
     </div>
-    <img className='w-10 rounded-full' src="../public/logo1.jfif" /> <a className=" font-bold ps-3 text-2xl italic">Ambitious Kitchen</a>
+    <img className='w-10 rounded-full' src={logo1} /> <a className=" font-bold ps-3 text-2xl italic">Ambitious Kitchen</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
