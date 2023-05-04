@@ -3,7 +3,7 @@ import { FaStar, FaStarHalf, FaStarHalfAlt } from 'react-icons/fa';
 import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Receipe = ({receipe}) => {
-    console.log(receipe);
+    // console.log(receipe);
     const {recipe_name, recipes_photo, rating, id,description}=receipe;
     return (
         <div className="card w-full h-full bg-base-100 shadow-xl">

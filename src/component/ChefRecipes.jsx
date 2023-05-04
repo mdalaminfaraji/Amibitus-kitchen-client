@@ -11,7 +11,7 @@ const ChefRecipes = ({recipes}) => {
     }
     console.log(recipes);
     const {id, recipe_name,recipes_photo,cooking_method,rating,ingredients }=recipes;
-   console.log(ingredients);
+   
     return (
         <div className="card card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2">
             <figure><LazyLoadImage src={recipes_photo} className='h-full w-full p-4 rounded-lg' alt="photo"/></figure>

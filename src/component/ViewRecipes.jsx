@@ -6,7 +6,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 const ViewRecipes = () => {
     const chefData=useLoaderData();
     const {id, chef_name, years_of_experience, num_of_recipes, likes,bio, chef_picture, recipes}=chefData.chef;
-    console.log(chefData.chef);
+    // console.log(chefData.chef);
     return (
         <>
         <div className='grid grid-cols-1 md:grid-cols-2 mt-3 drop-shadow-md  md:h-96  p-8 bg-gradient-to-r from-indigo-100 from-10% via-sky-200 via-30% to-emerald-300 to-90%'>
