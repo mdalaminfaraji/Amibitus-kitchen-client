@@ -10,6 +10,7 @@ import lunch from '../images/lunch.jpg';
 import tea from '../images/tea.png';
 import desert from '../images/desert.png';
 import Dinner from '../images/Dinner.jfif';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Home = () => {
     const [receipes, setRecipe]=useState([]);
@@ -66,7 +67,7 @@ const Home = () => {
              }}/>
              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6'>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={breakFast} className='w-40 h-40 p-3' alt="Movie"/> </figure>
+                <figure><LazyLoadImage src={breakFast} className='w-40 h-40 p-3' alt="Movie"/> </figure>
                 <div className="card-body">
                     <h2 className="card-title">BreakFast!!!</h2>
                     <p>Also known as rice porridge, congee is a popular breakfast  </p>
@@ -74,7 +75,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={lunch} className='w-40 h-40 p-3' alt="Movie"/></figure>
+                <figure><LazyLoadImage src={lunch} className='w-40 h-40 p-3' alt="Movie"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Lunch!!!</h2>
                     <p>These long, deep-fried dough sticks are a popular lunch item in China.</p>
@@ -82,7 +83,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={Dinner} className='w-40 h-40 p-3' alt="Movie"/></figure>
+                <figure><LazyLoadImage src={Dinner} className='w-40 h-40 p-3' alt="Movie"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Dinner!!!</h2>
                     <p>Steamed buns filled with meat, vegetables,  in China</p>
@@ -90,7 +91,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={tea} className='w-40 h-40 p-3' alt="Movie"/></figure>
+                <figure><LazyLoadImage src={tea} className='w-40 h-40 p-3' alt="Movie"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Special Tea!!!</h2>
                     <p>These steamed dumplings are typically filled with...</p>
@@ -98,7 +99,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={desert} className='w-40 h-40 p-3' alt="Movie"/></figure>
+                <figure><LazyLoadImage src={desert} className='w-40 h-40 p-3' alt="Movie"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Desert!!!</h2>
                     <p>These steamed dumplings are very.....</p>
@@ -106,7 +107,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="card card-side bg-base-100 shadow-xl">
-                <figure><img src={drink} className='w-40 h-40 p-3' alt="Movie"/></figure>
+                <figure><LazyLoadImage src={drink} className='w-40 h-40 p-3' alt="Movie"/></figure>
                 <div className="card-body">
                     <h2 className="card-title">Drink!!!</h2>
                     <p>A popular drink made from soybeans that are soaked, ground</p>

@@ -44,6 +44,7 @@ const Login = () => {
         signInWithGoogle()
         .then(result=>{
             const loggedUser=result.user;
+            navigate(from, {replace:true});
             console.log(loggedUser);
         })
         .catch(error=>{
@@ -55,6 +56,7 @@ const Login = () => {
         signInWithGithub()
         .then(result=>{
             const loggedUser=result.user;
+            navigate(from, {replace:true});
             console.log(loggedUser);
         })
         .catch(error=>{
@@ -105,10 +107,11 @@ const Login = () => {
           <div>
           <div>
             <button onClick={handleGoogleSignIn} className="btn btn-active btn-primary">
-               <FaGoogle className='text-black text-2xl'></FaGoogle> Continue with Google </button>
+             <p className='inline-flex'><FaGoogle className='text-black text-2xl'></FaGoogle> Continue with Google </p>  </button>
             </div>
           <div>
-            <button onClick={handleGithubSignIn} className="btn btn-active btn-primary"><FaGithubAlt className='text-black text-2xl'></FaGithubAlt> Continue with github </button>
+            <button onClick={handleGithubSignIn} className="btn btn-active btn-primary">
+                <p className='inline-flex'><FaGithubAlt className='text-black text-2xl'></FaGithubAlt> Continue with github </p></button>
             </div>
           </div>
 

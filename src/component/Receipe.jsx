@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaStar, FaStarHalf, FaStarHalfAlt } from 'react-icons/fa';
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Receipe = ({receipe}) => {
     console.log(receipe);
@@ -7,7 +8,7 @@ const Receipe = ({receipe}) => {
     return (
         <div className="card w-full h-full bg-base-100 shadow-xl">
   <figure className="px-10 pt-10">
-    <img src={recipes_photo} alt="Shoes" className="rounded-xl w-full h-72" />
+    <LazyLoadImage src={recipes_photo} alt="Shoes" className="rounded-xl w-full h-72" />
   </figure>
   <div className="card-body items-center text-center ">
     <h2 className="card-title text-3xl ">{recipe_name}</h2>

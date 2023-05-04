@@ -1,5 +1,6 @@
 import React from 'react';
 import banner5 from "../images/banner5.png";
+
 const Blog = () => {
     return (
         <div>
