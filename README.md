@@ -6,9 +6,9 @@
 
 ## Ambitious kitchen Features
 
--Especially this project use Every Ambitious kitchen lover
--This project has login and register system
--It has chef description section
--Add favorite button and open toast
--Especial section is blog section
+- Especially this project use Every Ambitious kitchen lover
+- This project has login and register system
+- It has chef description section
+- Add favorite button and open toast
+- Especial section is blog section
 

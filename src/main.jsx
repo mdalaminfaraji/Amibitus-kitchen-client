@@ -18,6 +18,7 @@ import ErrorPage from './component/Errorpage';
 import AuthProviders from './Providers/AuthProviders';
 import Chefs from './component/Chefs';
 import ViewRecipes from './component/ViewRecipes';
+import Privateroute from './routes/Privateroute';
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
            path:"/recipes/:id",
-           element:<ViewRecipes></ViewRecipes>,
+           element:<Privateroute><ViewRecipes></ViewRecipes></Privateroute>,
            loader:({params})=>fetch(`https://assignment10server-mdalaminfaraji.vercel.app/allChefData/${params.id}`)
       },
       {
