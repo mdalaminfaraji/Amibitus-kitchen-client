@@ -1,9 +1,21 @@
 import React from 'react';
 import banner5 from "../images/banner5.png";
-
+import ReactDOM from 'react-dom';
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 const Blog = () => {
+
+
     return (
-        <div>
+        <>
+        <div className='btn-primary text-center'>
+        <Pdf targetRef={ref} filename="code-example.pdf">
+        {({ toPdf }) => <button onClick={toPdf}>Generate Pdf</button>}
+      </Pdf>
+        </div>
+        <div ref={ref}>
+            
+    
             <div className='h-screen my-4 brightness-100 relative  w-full rounded-lg' style={{backgroundImage: `url(${banner5}) `,backgroundRepeat:'no-repeat', backgroundSize:'cover'}}>
               
             </div>
@@ -89,6 +101,7 @@ Abstracting API calls</p>
             </div>
             </div>
         </div>
+        </>
     );
 };
 

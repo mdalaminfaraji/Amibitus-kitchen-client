@@ -14,7 +14,7 @@ const ChefRecipes = ({recipes}) => {
    console.log(ingredients);
     return (
         <div className="card card-side bg-base-100 shadow-xl grid grid-cols-1 md:grid-cols-2">
-            <figure><LazyLoadImage src={recipes_photo} className='h-full w-full p-4 rounded-lg' alt="Movie"/></figure>
+            <figure><LazyLoadImage src={recipes_photo} className='h-full w-full p-4 rounded-lg' alt="photo"/></figure>
             <div className="card-body">
                 <h2 className="card-title text-3xl font-semibold">{recipe_name}</h2>
                 <p className='font-semibold'>Cooking Method:</p>
